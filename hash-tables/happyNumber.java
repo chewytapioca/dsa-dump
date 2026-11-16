@@ -1,5 +1,3 @@
-import java.util.*;
-// Leetcode Problem #202 
 public class happyNumber {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
