@@ -1,6 +1,6 @@
 package arrays;
 
-public class subArraySum {
+public class arraySum {
     public static void main(String[] args) {
         int[] nums = {1, 1, 1};
         int k = 2;
