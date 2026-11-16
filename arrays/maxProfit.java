@@ -6,6 +6,7 @@ public class maxProfit {
 
      public static void main(String[] args) {
         int[] prices = {7,1,5,3,6,4};
+        System.out.println("Function outputs:");
         System.out.println(calculateMaxProfit(prices));
     }
 
@@ -15,17 +16,27 @@ public class maxProfit {
         // return max profit, buy one day then sell the next 
         // if cannot achieve any profit, return 0 
         int  minPrice = prices[0]; // find minimum price
+        int maxPrice = prices[0];
         int maxProfit = 0;
-        for(int i = 1; i < prices.length; i++) { // only need to iterate through the array once
+        for(int i = 1; i < prices.length; i++) { 
+            if(prices[i] > maxPrice) {
+                maxPrice = prices[i];
+                // System.out.println("Max price:" + maxPrice); 
+
+            }
            if(prices[i] < minPrice) {
                 minPrice = prices[i];
-           } else {
-            maxProfit = prices[i] - minPrice;
+                // System.out.println("Min Price:" + minPrice);
+            
+           } else if(prices[i] - minPrice > maxProfit) {
+                // System.out.println("Calculation " + prices[i] + " - " + minPrice);
+                maxProfit = prices[i] - minPrice;
+
            }
         
         }
 
-        return maxProfit;
+       return maxProfit;
         
        // This is worst case O(n)
     }
