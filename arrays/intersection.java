@@ -3,7 +3,7 @@ import java.util.*;
 
 // Leetcode Problem #349 
 public class intersection {
-
+//output an array that has intersecting values from the two given arrays
 }
 
 class Solution {
