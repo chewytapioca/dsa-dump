@@ -1,12 +1,14 @@
 package arrays;
 import java.util.*;
+
+// Leetcode Problem #349 
 public class intersection {
-    
+
 }
 
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
-        // return hashset prob 
+        // need hashset to store first array w/o duplicates 
         Set<Integer> seen = new HashSet<>(); 
         for (int i : nums1) {
             seen.add(i); // set: 1,2,2,1
@@ -22,7 +24,7 @@ class Solution {
         }   
         
 
-        // return an array 
+        // return an array so we convert it to an array 
 
         int[] result = new int[newSet.size()]; 
         int index = 0;
@@ -31,5 +33,5 @@ class Solution {
         }
 
         return result; 
-        }
+    }
 }
